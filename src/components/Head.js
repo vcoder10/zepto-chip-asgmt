@@ -4,7 +4,7 @@ import logo from "../images/logo.svg";
 
 const Head = () => {
   return (
-    <div className="grid w-full grid-cols-12 py-6 bg-purple-900 ">
+    <div className="grid w-full h-screen grid-cols-12 py-6 bg-purple-900">
       <div className="col-span-2">
         <img src={logo} alt="logo" className="px-2 ml-8 w-28" />
       </div>

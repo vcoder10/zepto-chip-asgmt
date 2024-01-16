@@ -31,6 +31,16 @@ const Searchbar = () => {
   };
   return (
     <div>
+      <input
+        type="text"
+        value={input}
+        placeholder="Search..."
+        className="w-full p-2 rounded-lg"
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => handleKeyDown(e)}
+        onFocus={() => setShowSuggestions(true)}
+        // onBlur={() => setShowSuggestions(false)}
+      />
       <div className="flex flex-wrap m-2">
         {chipItems.map((item, index) => (
           <div
@@ -44,18 +54,8 @@ const Searchbar = () => {
           </div>
         ))}
       </div>
-      <input
-        type="text"
-        value={input}
-        placeholder="Search..."
-        className="w-full p-2 rounded-lg"
-        onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => handleKeyDown(e)}
-        onFocus={() => setShowSuggestions(true)}
-        // onBlur={() => setShowSuggestions(false)}
-      />
       {showSuggestions && (
-        <div className="flex flex-col mt-2 bg-white rounded-lg shadow-lg">
+        <div className="flex flex-col mt-2 overflow-y-auto bg-white rounded-lg shadow-lg h-96">
           <ul>
             {filterItems(input).map((filterItem, index) => (
               <li

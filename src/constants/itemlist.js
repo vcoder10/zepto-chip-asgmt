@@ -9,4 +9,10 @@ export const data = [
   "cheese",
   "cheeseburgur",
   "almondsbiscuits",
+  "banana",
+  "basket",
+  "ballon",
+  "iced Tea",
+  "tomato",
+  "tomato ketchups",
 ];
