@@ -1,11 +1,13 @@
 export const data = [
   "chocalate",
+  "choclate biscuits",
   "cherries",
   "ice",
   "apple",
   "almonds",
   "almondoil",
   "icecream",
+  "icecream biscuits",
   "cheese",
   "cheeseburgur",
   "almondsbiscuits",
@@ -15,4 +17,6 @@ export const data = [
   "iced Tea",
   "tomato",
   "tomato ketchups",
+  "tomato soup",
+  "tomato salad",
 ];
