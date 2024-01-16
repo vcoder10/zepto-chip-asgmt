@@ -6,6 +6,8 @@ const Searchbar = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [availableItems, setAvailableItems] = useState(data);
   console.log("rendering...");
+
+  // add item if i click enter (i will also add new item)
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       setChipItems([...chipItems, input]);
@@ -14,16 +16,22 @@ const Searchbar = () => {
       console.log("enter");
     }
   };
+
+  // remove item i click on cross icon
   const handleRemove = (chip) => {
     setAvailableItems([...availableItems, chip]);
     setChipItems(chipItems.filter((item, index) => item !== chip));
   };
+
+  // add item if i click on suggested item
   const handleAddItem = (suggestedItem) => {
     setChipItems([...chipItems, suggestedItem]);
     setInput("");
     setAvailableItems(availableItems.filter((item) => item !== suggestedItem));
     setShowSuggestions(false);
   };
+
+  // filter items based on search text
   const filterItems = (searchText) => {
     return availableItems.filter((item) =>
       item.toLowerCase().startsWith(searchText.toLowerCase())

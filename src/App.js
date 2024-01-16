@@ -1,4 +1,4 @@
-import Body from "./components/Body.js";
+// import Body from "./components/Body.js";
 import Head from "./components/Head.js";
 function App() {
   return (
